@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8QJ-pR-3t0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Min Cost-->
+        <scene sceneID="NLG-1l-0Qt">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O0z-3x-ZpB" customClass="HomeViewController" customModule="MinCostCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j7V-Be-qQn"/>
+                        <viewControllerLayoutGuide type="bottom" id="P4a-xi-JiI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4ug-u7-Kcq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eY8-BN-2h2">
+                                <rect key="frame" x="16" y="94" width="343" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="1ja-2t-NsX"/>
+                                    <constraint firstAttribute="width" constant="343" id="OcX-i8-BGG"/>
+                                    <constraint firstAttribute="width" secondItem="eY8-BN-2h2" secondAttribute="height" multiplier="49:4" id="raB-jc-0Q1"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="One"/>
+                                    <segment title="Two"/>
+                                    <segment title="Three"/>
+                                </segments>
+                                <connections>
+                                    <action selector="getLowCost:" destination="O0z-3x-ZpB" eventType="valueChanged" id="ifN-QJ-F21"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOC-Vj-6jm">
+                                <rect key="frame" x="16" y="150" width="343" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="GT5-wA-pei"/>
+                                    <constraint firstAttribute="height" constant="201" id="Xx8-6V-JuE"/>
+                                    <constraint firstAttribute="width" secondItem="pOC-Vj-6jm" secondAttribute="height" multiplier="343:95" constant="-382.71578947368425" id="dwa-nx-XIt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvx-JX-tgM">
+                                <rect key="frame" x="35" y="359" width="305" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lvx-JX-tgM" secondAttribute="height" multiplier="305:37" id="JVB-J9-V1K"/>
+                                    <constraint firstAttribute="width" constant="305" id="e8D-2c-YD7"/>
+                                    <constraint firstAttribute="height" constant="37" id="uCm-eu-acy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lvx-JX-tgM" firstAttribute="top" secondItem="pOC-Vj-6jm" secondAttribute="bottom" constant="8" id="Buj-CR-AaX"/>
+                            <constraint firstAttribute="trailing" secondItem="lvx-JX-tgM" secondAttribute="trailing" constant="35" id="IQR-sv-r5L"/>
+                            <constraint firstItem="eY8-BN-2h2" firstAttribute="leading" secondItem="4ug-u7-Kcq" secondAttribute="leading" constant="16" id="Tzd-wW-Lhm"/>
+                            <constraint firstAttribute="trailing" secondItem="eY8-BN-2h2" secondAttribute="trailing" constant="16" id="YCB-j4-IOp"/>
+                            <constraint firstItem="lvx-JX-tgM" firstAttribute="leading" secondItem="4ug-u7-Kcq" secondAttribute="leading" constant="35" id="cpa-ad-KQh"/>
+                            <constraint firstAttribute="trailing" secondItem="pOC-Vj-6jm" secondAttribute="trailing" constant="16" id="fCW-KS-9k8"/>
+                            <constraint firstItem="pOC-Vj-6jm" firstAttribute="leading" secondItem="4ug-u7-Kcq" secondAttribute="leading" constant="16" id="gLj-pd-1us"/>
+                            <constraint firstItem="eY8-BN-2h2" firstAttribute="top" secondItem="j7V-Be-qQn" secondAttribute="bottom" constant="30" id="n0s-BY-61l"/>
+                            <constraint firstItem="pOC-Vj-6jm" firstAttribute="top" secondItem="eY8-BN-2h2" secondAttribute="bottom" constant="28" id="or4-jE-TBv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Min Cost" id="XaA-UZ-QmM"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="lvx-JX-tgM" id="DHt-WU-x6y"/>
+                        <outlet property="segmentControl" destination="eY8-BN-2h2" id="qHT-L0-n62"/>
+                        <outlet property="titleLabel" destination="pOC-Vj-6jm" id="Q96-xr-ZAY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kie-oO-4Np" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272.8" y="313.49325337331339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jv7-l8-i2u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8QJ-pR-3t0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m71-aX-9Vn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="O0z-3x-ZpB" kind="relationship" relationship="rootViewController" id="gQG-9q-98Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cF8-EJ-3yS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333.60000000000002" y="313.49325337331339"/>
+        </scene>
+    </scenes>
+</document>
